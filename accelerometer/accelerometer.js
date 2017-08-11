@@ -19,7 +19,6 @@ accel.on('ready', function () {
 
   //printing out the z value
   accel.on('data', function (xyz) {
-    console.log('xyz', xyz)
     var zArray=[];
     var counter = 0;
 
@@ -27,12 +26,10 @@ accel.on('ready', function () {
       if(counter === 100){
 
         var z=xyz[2]; 
-        console.log('just z ' + z);
         zArray.push(z);
         counter = 0;
       }
 
-      console.log(counter);
       counter++;
     }
      
